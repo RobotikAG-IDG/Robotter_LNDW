@@ -7,22 +7,22 @@ class Motor():
         self.motor_right = motorev3(utility.convert_form_String_to_Port(str(motor_right_port)))
 
 
-    def move_forward(self, speed: int):
+    def move_forward(self, speed):
         self.motor_left.run(speed)
         self.motor_right.run(speed)
     
 
-    def move_backward(self, speed: int):
+    def move_backward(self, speed):
         self.motor_left.run(-speed)
         self.motor_right.run(-speed)
     
 
-    def turn_left(self, speed: int):
+    def turn_left(self, speed):
         self.motor_right.run_angle(speed, 166, wait=False)
         self.motor_left.run_angle(speed, -169)
 
 
-    def turn_right(self, speed: int):
+    def turn_right(self, speed):
         self.motor_left.run_angle(speed, 150, wait=False)
         self.motor_right.run_angle(speed, -171)
 
