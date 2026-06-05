@@ -8,10 +8,3 @@ class Button():
     
     def is_pressed(self):
         return not self.button.pressed()
-
-    
-    
-button1 = Button("4")
-while True:
-    if button1.is_pressed():
-        print("Button is pressed")

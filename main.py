@@ -1,19 +1,18 @@
 #!/usr/bin/env pybricks-micropython
-
+from pybricks.parameters import *
 from motor import Motor
+from button import Button
 from utility import wait
+from colores import *
+from coloresensor import ColorSensor
 
 
 motor = Motor("D", "A")
-
-def roboter_loop():
-    motor.move_forward(500)
-    wait(2)
-    motor.move_backward(500)
-    wait(2)
-    motor.turn_left(500)
-    motor.turn_right(500)
+ColorSensor = ColorSensor("4")
 
 
 while True:
-    roboter_loop()
+    if ColorSensor.color() == blue:
+        print("Hi")
+    else:
+        print(ColorSensor.color())
