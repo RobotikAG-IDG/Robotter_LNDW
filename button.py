@@ -7,4 +7,4 @@ class Button():
         self.button = button(convert_form_String_to_Port(port))
     
     def wurde_gedrückt(self):
-        return not self.button.pressed()
+        return self.button.pressed()
