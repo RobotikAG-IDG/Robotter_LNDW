@@ -19,13 +19,13 @@ class Motor():
     
 
     def links_drehen(self):
-        self.motor_right.run_angle(self.speed, 166, wait=False)
-        self.motor_left.run_angle(self.speed, -169)
+        self.motor_right.run_angle(self.speed, 153, wait=False)
+        self.motor_left.run_angle(self.speed, -150)
 
 
     def rechts_drehen(self):
-        self.motor_left.run_angle(self.speed, 150, wait=False)
-        self.motor_right.run_angle(self.speed, -171)
+        self.motor_left.run_angle(self.speed, 153, wait=False)
+        self.motor_right.run_angle(self.speed, -150)
 
     def stop(self):
         self.motor_left.stop()
