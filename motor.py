@@ -9,13 +9,13 @@ class Motor():
 
 
     def vorwärts_fahren(self):
-        self.motor_left.run(self.speed)
-        self.motor_right.run(self.speed)
+        self.motor_left.run_angle(self.speed, 613, wait=False)
+        self.motor_right.run_angle(self.speed, 613)
     
 
     def rückwärts_fahren(self):
-        self.motor_left.run(-self.speed)
-        self.motor_right.run(-self.speed)
+        self.motor_left.run_angle(self.speed, -613, wait=False)
+        self.motor_right.run_angle(self.speed, -613)
     
 
     def links_drehen(self):
