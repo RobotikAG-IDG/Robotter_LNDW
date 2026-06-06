@@ -19,6 +19,6 @@ def convert_form_String_to_Port(port_string):
         elif (port_string == "4"):
             return Port.S4
 
-def wait(time):
+def warte(time):
     from time import sleep
     sleep(time)

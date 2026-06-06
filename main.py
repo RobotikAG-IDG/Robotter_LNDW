@@ -8,11 +8,8 @@ from coloresensor import ColorSensor
 
 
 motor = Motor("D", "A")
-ColorSensor = ColorSensor("4")
+
 
 
 while True:
-    if ColorSensor.color() == blue:
-        print("Hi")
-    else:
-        print(ColorSensor.color())
+    motor.vorwärts_fahren()

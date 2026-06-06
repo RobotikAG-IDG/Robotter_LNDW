@@ -5,26 +5,27 @@ class Motor():
     def __init__(self, motor_left_port, motor_right_port):
         self.motor_left = motorev3(utility.convert_form_String_to_Port(str(motor_left_port)))
         self.motor_right = motorev3(utility.convert_form_String_to_Port(str(motor_right_port)))
+        self.speed = 200
 
 
-    def move_forward(self, speed):
-        self.motor_left.run(speed)
-        self.motor_right.run(speed)
+    def vorwärts_fahren(self):
+        self.motor_left.run(self.speed)
+        self.motor_right.run(self.speed)
     
 
-    def move_backward(self, speed):
-        self.motor_left.run(-speed)
-        self.motor_right.run(-speed)
+    def rückwärts_fahren(self):
+        self.motor_left.run(-self.speed)
+        self.motor_right.run(-self.speed)
     
 
-    def turn_left(self, speed):
-        self.motor_right.run_angle(speed, 166, wait=False)
-        self.motor_left.run_angle(speed, -169)
+    def links_drehen(self):
+        self.motor_right.run_angle(self.speed, 166, wait=False)
+        self.motor_left.run_angle(self.speed, -169)
 
 
-    def turn_right(self, speed):
-        self.motor_left.run_angle(speed, 150, wait=False)
-        self.motor_right.run_angle(speed, -171)
+    def rechts_drehen(self):
+        self.motor_left.run_angle(self.speed, 150, wait=False)
+        self.motor_right.run_angle(self.speed, -171)
 
     def stop(self):
         self.motor_left.stop()

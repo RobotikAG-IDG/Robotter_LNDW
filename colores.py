@@ -1,11 +1,11 @@
 from pybricks.parameters import Color as c
 
-black = c.BLACK
-blue = c.BLUE
-green = c.GREEN
-yellow = c.YELLOW
-red = c.RED
-white = c.WHITE
-brown = c.BROWN
+schwartz = c.BLACK
+blau = c.BLUE
+gruen = c.GREEN
+gelb = c.YELLOW
+rot = c.RED
+weiss = c.WHITE
+braun = c.BROWN
 orange = c.ORANGE
-purple = c.PURPLE
+lila = c.PURPLE
